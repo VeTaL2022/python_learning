@@ -6,9 +6,11 @@
 
 # - створити функцію яка приймає три числа та виводить та повертає найбільше.
 # def largest_number(num1, num2, num3):
-#     return (max(num1, num2, num3))
+#     max_num = max(num1, num2, num3)
+#     print(max_num)
+#     return max_num
 #
-# print(largest_number(5, 8, 9.1))
+# largest_number(5,8,3)
 
 # - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше
 # def min_max(*args):

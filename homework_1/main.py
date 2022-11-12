@@ -1,12 +1,18 @@
 # 1)Дан list:
-# list = [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]
+list = [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]
 
 # - знайти мін число
-# print(min(list))
+# def find_min(ls):
+#     print(min(ls))
+#
+# find_min(list)
 
 # - видалити усі дублікати
-# new_list = [*set(list)]
-# print(new_list)
+# def set_from_list(ls):
+#     new_list = [*set(ls)]
+#     print(new_list)
+#
+# set_from_list(list)
 
 # - замінити кожне 4-те значення на 'X'
 # res = []
@@ -28,4 +34,6 @@
 #                 print(' ', end=' ')
 #         print()
 #
-# square(6)
+# square(5)
+
+# a, b = map(int, input().split())
