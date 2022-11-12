@@ -4,7 +4,7 @@
 # string = 'as 23 fdfdg544'
 # result = ','.join([num for num in string if num.isdigit()])
 # print(result)
-
+#
 # for num in string:
 #     if num.isdigit():
 #         print(num, end=', ')
@@ -13,6 +13,6 @@
 # string = 'as 23 fdfdg544 34'
 # res = ''.join(num if num.isdigit() else ' ' for num in string).split()
 # print(', '.join(res))
-
+#
 # res = re.findall(r'\d+', string)  # або r'-?\d+\.?\d*'
 # print(','.join(res))
