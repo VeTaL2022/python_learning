@@ -145,18 +145,18 @@ class Main:
     def add(self) -> None:
         if isinstance(self, Magazine):
             Main.printable_list.append(self)
-        elif isinstance(self, Book):
+        else:
             Main.printable_list.append(self)
 
-    @staticmethod
-    def show_all_magazines() -> None:
-        for magazines in Main.printable_list:
+    @classmethod
+    def show_all_magazines(cls) -> None:
+        for magazines in cls.printable_list:
             if isinstance(magazines, Magazine):
                 magazines.print()
 
-    @staticmethod
-    def show_all_books() -> None:
-        for books in Main.printable_list:
+    @classmethod
+    def show_all_books(cls) -> None:
+        for books in cls.printable_list:
             if isinstance(books, Book):
                 books.print()
 
