@@ -74,9 +74,9 @@ class Prince(Human):
         self.size_of_founded_shoe = size_of_founded_shoe
 
     def find_cinderella(self, all_cinderellas: list[str]) -> None:
-        for i in all_cinderellas:
-            if self.size_of_founded_shoe == i.size_of_shoe:
-                print(f'prince `{self.name}` and cinderella `{i.name}` => Couple :)')
+        for cinderella in all_cinderellas:
+            if self.size_of_founded_shoe == cinderella.size_of_shoe:
+                print(f'prince `{self.name}` and cinderella `{cinderella.name}` => Couple :)')
 
 
 class Cinderella(Human):
@@ -85,6 +85,7 @@ class Cinderella(Human):
     def __init__(self, name: str, age: int, size_of_shoe: float) -> None:
         super().__init__(name, age)
         self.size_of_shoe = size_of_shoe
+        Cinderella.count += 1
 
     @classmethod
     def count_all(cls) -> None:
@@ -96,8 +97,6 @@ cinderellas = [
     Cinderella('Perla', 17, 35), Cinderella('Drizella', 58, 40.4), Cinderella('Anastasia', 22, 37),
     Cinderella('Kate', 19, 36.6), Cinderella('Lady Tremaine', 10, 31), Cinderella('Cinderella', 14, 37.5)
 ]
-for cinderella in cinderellas:
-    Cinderella.count += 1
 
 Cinderella.count_all()
 
@@ -140,13 +139,14 @@ class Magazine(Printable):
 # - метод show_all_books який буде виводити всі книги викликаючи метод print абстрактного классу
 
 class Main:
-    printable_list: list = [str]
+    printable_list: list = []
 
-    def add(self) -> None:
-        if isinstance(self, Magazine):
-            Main.printable_list.append(self)
+    @classmethod
+    def add(cls, item) -> None:
+        if isinstance(cls, Magazine):
+            cls.printable_list.append(item)
         else:
-            Main.printable_list.append(self)
+            cls.printable_list.append(item)
 
     @classmethod
     def show_all_magazines(cls) -> None:
