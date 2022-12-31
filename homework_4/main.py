@@ -11,7 +11,6 @@ try:
 except Exception as err:
     print(err)
 
-
 # 2) Створити записну книжку покупок:
 # - у покупки повинна бути id, назва і ціна
 # - всі покупки зберігаємо в файлі
@@ -26,7 +25,7 @@ except Exception as err:
 import json
 
 
-class Book_of_Purchases:
+class BookOfPurchases:
     def __init__(self, file_name):
         self.__file_name = file_name
         self.__purchases_list = []
@@ -139,7 +138,6 @@ class Book_of_Purchases:
 purchases = Book_of_Purchases('purchases.json')
 purchases.menu()
 
-
 # Є ось такий список:
 data = [
     [
@@ -168,6 +166,7 @@ data = [
 
     ]
 ]
+
 
 # потрібно брати по черзі с кожного списку id і класти в список res, якщо таке значення вже є в результуючому списку то брати наступне з того ж підсписку
 #

@@ -109,10 +109,12 @@ print()
 # 1) Створити абстрактний клас Printable який буде описувати абстрактний метод print()
 from abc import ABC, abstractmethod
 
+
 class Printable(ABC):
     @abstractmethod
     def print(self) -> None:
         pass
+
 
 # # 2) Створити класи Book та Magazine в кожного в конструкторі змінна name, та який наслідуются від класу Printable
 class Book(Printable):
